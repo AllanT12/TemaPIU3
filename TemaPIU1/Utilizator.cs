@@ -8,23 +8,29 @@ namespace TemaPIU1
 {
     public class Utilizator
     {
-        string Nume;
-        string Prenume;
-        int Buget;
+        public Distanta Distanta
+        {
+            get;
+            set;
+        }
+        public string Nume { get; set; }
+        public string Prenume { get; set; }
+        public int Buget { get; set; }
+        public static int IdUltimUtilizator { get; set; } = 0;
         public Utilizator(string _Nume,string _Prenume,int _Buget)
         {
             Nume = _Nume;
             Prenume = _Prenume;
             Buget = _Buget;
         }
-        //nou ex1 lab 4
+        //ex1 lab 4
         public string ConversieLaSir()
         {
 
             string s=string.Format("Utilizatorul {0} {1} are bugetul {2} Euro",Nume,Prenume,Buget);
             return s;
         }
-        //nou ex2 lab 4
+        //ex2 lab 4
         public string compara(Utilizator utilizator)
         {
             if (Buget < utilizator.Buget)
@@ -33,6 +39,17 @@ namespace TemaPIU1
                 return"utilizatorii au acelasi buget";
             else
                 return"utilizatorul "+Nume+ " are mai multi bani";
+        }
+        //Lab 5
+        public string ConversieLaSir_PentruFisier()
+        {
+            string s = string.Format("{0} {1} {2}",Nume,Prenume,Buget);
+
+            return s;
+        }
+       public void SetBuget(int _buget)
+        {
+            Buget = _buget;
         }
     }
 }

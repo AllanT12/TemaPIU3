@@ -11,8 +11,18 @@ namespace TemaPIU1
         string Tara;
         string Oras;
         int pret;
-
-        //nou
+       
+        public Climat Climat
+        {
+            set;
+            get;
+        }
+        public Dotari Dotari
+        {
+            get;
+            set;
+        }
+      
         public Sejur(string _Tara, string _Oras, string _pret)
         {
             Tara = _Tara;
@@ -27,7 +37,13 @@ namespace TemaPIU1
             pret = _pret;
         }
 
-        
+        public Sejur(string rand)
+        {
+            string[] cuvinte = rand.Split(' ');
+            Tara=cuvinte[0];
+            Oras = cuvinte[1];
+            pret =Convert.ToInt32(cuvinte[2]);
+        }
 
         public string Afisare()
         {
