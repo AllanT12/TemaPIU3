@@ -48,21 +48,21 @@ namespace TemaPIU1
                 string s2 = T4.Afisare(); Console.WriteLine(s2);//in mod normal nu pun afisare aici
             }
             //lab 4 ex 1
-            //Console.WriteLine("Nume:");
-            //string nume=Console.ReadLine();
-            //Console.WriteLine("Prenume:");
-            //string prenume = Console.ReadLine();
-            //Console.WriteLine("Buget:");
-            //int buget =Convert.ToInt32(Console.ReadLine());
-            //Utilizator U2 = new Utilizator(nume,prenume,buget);
-            //Console.WriteLine(U.ConversieLaSir());
-            //Console.WriteLine(U2.ConversieLaSir());
+            Console.WriteLine("Nume:");
+            string nume=Console.ReadLine();
+            Console.WriteLine("Prenume:");
+            string prenume = Console.ReadLine();
+            Console.WriteLine("Buget:");
+            int buget =Convert.ToInt32(Console.ReadLine());
+            Utilizator U2 = new Utilizator(nume,prenume,buget);
+            Console.WriteLine(U.ConversieLaSir());
+            Console.WriteLine(U2.ConversieLaSir());
             //adugare in fisier
-            //utilizators[nrUtilizatori] = U2;
-            //nrUtilizatori++;
-            //adminUser.AddUtilizator(U2);
+            utilizators[nrUtilizatori] = U2;
+            nrUtilizatori++;
+            adminUser.AddUtilizator(U2);
             //lab 4 ex 2
-            //Console.WriteLine(U.compara(U2));
+            Console.WriteLine(U.compara(U2));
             //lab 5 ex 1
             Console.WriteLine("Cum vi s-a parut optiune primita?\nMare=1\nMedie=2\nMica=3\n");
             int optiune= Convert.ToInt32(Console.ReadLine());
